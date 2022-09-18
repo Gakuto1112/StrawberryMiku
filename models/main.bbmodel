@@ -3071,7 +3071,7 @@
             "uuid": "caa58ff2-2685-303f-730b-3b59df1519a4"
         },
         {
-            "name": "2",
+            "name": "1",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3155,7 +3155,7 @@
             "uuid": "c3a0f4ec-9f1b-e2a2-bcd5-7307b8cbc2f8"
         },
         {
-            "name": "3",
+            "name": "2",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3239,7 +3239,7 @@
             "uuid": "8e42b27b-816e-c40d-e1a4-fce779498e39"
         },
         {
-            "name": "4",
+            "name": "3",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3323,7 +3323,7 @@
             "uuid": "4d6cce3f-0fa4-8b65-152c-f09cd665eea4"
         },
         {
-            "name": "5",
+            "name": "4",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3407,7 +3407,7 @@
             "uuid": "abea45bd-0ce9-9037-a662-70f6c9c7563b"
         },
         {
-            "name": "6",
+            "name": "5",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3491,7 +3491,7 @@
             "uuid": "c5fffdc2-07af-8ba2-3b52-64cdedfcc2c0"
         },
         {
-            "name": "7",
+            "name": "6",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3575,7 +3575,7 @@
             "uuid": "98d91fcc-38a4-e934-1579-1482a13a178c"
         },
         {
-            "name": "8",
+            "name": "7",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3659,7 +3659,7 @@
             "uuid": "3874ef86-807b-9ec5-7bd8-f601d02b0ac9"
         },
         {
-            "name": "9",
+            "name": "8",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3743,7 +3743,7 @@
             "uuid": "61a3a864-5e77-9e12-5530-607362371d45"
         },
         {
-            "name": "10",
+            "name": "9",
             "rescale": false,
             "locked": false,
             "from": [
@@ -3827,7 +3827,7 @@
             "uuid": "788b830a-b61f-2520-cd58-7ae36e694b65"
         },
         {
-            "name": "11",
+            "name": "10",
             "rescale": false,
             "locked": false,
             "from": [
@@ -6931,7 +6931,7 @@
                                 "30482e48-00e6-3eb2-3425-e14157148cfa",
                                 "002c30e5-4d00-3c3f-a18c-c49068f126ec",
                                 {
-                                    "name": "10",
+                                    "name": "HeadTailRight10",
                                     "origin": [
                                         3,
                                         32,
@@ -6996,7 +6996,7 @@
                                     "color": 0,
                                     "uuid": "d2ecbc1c-d628-37f4-fd38-1a1dc92b1c80",
                                     "export": true,
-                                    "isOpen": true,
+                                    "isOpen": false,
                                     "locked": false,
                                     "visibility": true,
                                     "autouv": 0,
@@ -7031,7 +7031,7 @@
                             "color": 0,
                             "uuid": "70a77b62-ac02-b3df-60ef-161dffa404b7",
                             "export": true,
-                            "isOpen": false,
+                            "isOpen": true,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,
@@ -7046,7 +7046,7 @@
                                 "61a3a864-5e77-9e12-5530-607362371d45",
                                 "788b830a-b61f-2520-cd58-7ae36e694b65",
                                 {
-                                    "name": "2",
+                                    "name": "HeadTailLeft10",
                                     "origin": [
                                         -3,
                                         32,
@@ -7143,7 +7143,7 @@
                     "color": 0,
                     "uuid": "4e4466ed-2a4b-16ce-812f-b99baa72c224",
                     "export": true,
-                    "isOpen": true,
+                    "isOpen": false,
                     "locked": false,
                     "visibility": true,
                     "autouv": 0,

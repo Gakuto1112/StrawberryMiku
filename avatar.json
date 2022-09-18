@@ -1,0 +1,7 @@
+{
+	"name": "Strawberry Miku",
+	"author": "Gakuto1112",
+	"autoScripts": [
+		"scripts/main.lua"
+	]
+}
