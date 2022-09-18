@@ -1,6 +1,7 @@
 {
 	"name": "Strawberry Miku",
 	"author": "Gakuto1112",
+	"color": "e40a3c",
 	"autoScripts": [
 		"scripts/main.lua"
 	]
