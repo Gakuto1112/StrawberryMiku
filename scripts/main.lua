@@ -1,4 +1,7 @@
 events.ENTITY_INIT:register(function ()
+	--クラスのインスタンス化
+	ForkClass = require("scripts/forks")
+
 	--初期化処理
 	for _, vanillaModel in ipairs({vanilla_model.PLAYER, vanilla_model.ARMOR}) do
 		vanillaModel:setVisible(false)
