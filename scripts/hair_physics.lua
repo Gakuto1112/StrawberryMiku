@@ -23,72 +23,78 @@ events.RENDER:register(function ()
 	local rightHair = models.models.main.Head.HeadTails.HeadTailRightPivot
 	local leftHair = models.models.main.Head.HeadTails.HeadTailLeftPivot
 	local backRibbon = models.models.main.Body.Dress.BackRibbonTop.BackRibbonTopLine
-	if HairRenderCount >= HairRenderLimit - 1 then
-		local FPS = client:getFPS()
-		local velocity = player:getVelocity()
-		local velocityRot = math.deg(math.atan2(velocity.z, velocity.x))
-		velocityRot = velocityRot < 0 and 360 + velocityRot or velocityRot
-		local bodyYaw = (player:getBodyYaw() - 270) % 360
-		local directionAbs = math.abs(velocityRot - bodyYaw)
-		local relativeVelocity = {math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.cos(math.rad(directionAbs)), math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.sin(math.rad(directionAbs))}
-		VelocityAverage[1] = (#VelocityData[1] * VelocityAverage[1] + relativeVelocity[1]) / (#VelocityData[1] + 1)
-		table.insert(VelocityData[1], relativeVelocity[1])
-		VelocityAverage[2] = (#VelocityData[2] * VelocityAverage[2] + velocity.y) / (#VelocityData[2] + 1)
-		table.insert(VelocityData[2], velocity.y)
-		VelocityAverage[3] = (#VelocityData[3] * VelocityAverage[3] + relativeVelocity[2]) / (#VelocityData[3] + 1)
-		table.insert(VelocityData[3], relativeVelocity[2])
-		local lookRotDelta = math.abs(lookRot - LookRotPrevRender)
-		lookRotDelta = lookRotDelta >= 180 and 360 - lookRotDelta or lookRotDelta
-		local lookRotDeltaData = lookRotDelta * FPS
-		if lookRotDelta < 20 and lookRotDelta ~= LookRotDeltaPrevRender then
-			VelocityAverage[4] = (#VelocityData[4] * VelocityAverage[4] + lookRotDeltaData) / (#VelocityData[4] + 1)
-			table.insert(VelocityData[4], lookRotDeltaData)
-		else
-			VelocityAverage[4] = (#VelocityData[4] * VelocityAverage[4]) / (#VelocityData[4] + 1)
-			table.insert(VelocityData[4], 0)
-		end
-		--古いデータの切り捨て
-		for index, velocityTable in ipairs(VelocityData) do
-			while #velocityTable > FPS * 0.25 / HairRenderLimit do
-				if #velocityTable >= 2 then
-					VelocityAverage[index] = (#velocityTable * VelocityAverage[index] - velocityTable[1]) / (#velocityTable - 1)
-				end
-				table.remove(velocityTable, 1)
-			end
-		end
-		--求めた平均から髪の角度を決定する。
-		local hairLimit = {{-60, 80}, {-30, 30}, {-60, 80}, {-30, 30}, {-60, -25}}
-		if General.hasItem(player:getItem(5)) == "minecraft:elytra" then
-			hairLimit[5] = {-25, -25}
-		end
-		local playerPose = player:getPose()
-		if playerPose == "FALL_FLYING" then
-			hairLimit[1] = {-40, 80}
-			hairLimit[3] = {-40, 80}
-			rightHair:setRot(math.min(math.max(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, hairLimit[1][1]), hairLimit[1][2]), math.min(math.max(-VelocityAverage[1] * 20, hairLimit[2][1]), hairLimit[2][2]), 0)
-			leftHair:setRot(math.min(math.max(hairLimit[3][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, hairLimit[3][1]), hairLimit[3][2]), math.min(math.max(VelocityAverage[1] * 20, hairLimit[2][1]), hairLimit[2][2]), 0)
-			backRibbon:setRot(hairLimit[5][2], 0, 0)
-		elseif playerPose == "SWIMMING" then
-			hairLimit[1] = {-40, 80}
-			hairLimit[3] = {-40, 80}
-			rightHair:setRot(math.min(math.max(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[1][1]), hairLimit[1][2]), math.min(math.max(-VelocityAverage[1] * 80, hairLimit[2][1]), hairLimit[2][2]), 0)
-			leftHair:setRot(math.min(math.max(hairLimit[3][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[3][1]), hairLimit[3][2]), math.min(math.max(VelocityAverage[1] * 80, hairLimit[2][1]), hairLimit[2][2]), 0)
-			backRibbon:setRot(hairLimit[5][2], 0, 0)
-		else
-			if math.floor(VelocityAverage[2] * 100 + 0.5) / 100 < 0 then
-				rightHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 + VelocityAverage[2] * 80 - VelocityAverage[4] * 0.03, hairLimit[1][1]), hairLimit[1][2]) - lookDir.y * 90, math.min(math.max(-VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
-				leftHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 + VelocityAverage[2] * 80 - VelocityAverage[4] * 0.03, hairLimit[3][1]), hairLimit[3][2]) - lookDir.y * 90, math.min(math.max(VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
-				backRibbon:setRot(math.min(math.max(-VelocityAverage[1] * 160 + VelocityAverage[2] * 80 - VelocityAverage[4] * 0.05, hairLimit[5][1]), hairLimit[5][2]), 0, 0)
+	if not renderer:isFirstPerson() or client:hasIrisShader() then
+		if HairRenderCount >= HairRenderLimit - 1 then
+			local FPS = client:getFPS()
+			local velocity = player:getVelocity()
+			local velocityRot = math.deg(math.atan2(velocity.z, velocity.x))
+			velocityRot = velocityRot < 0 and 360 + velocityRot or velocityRot
+			local bodyYaw = (player:getBodyYaw() - 270) % 360
+			local directionAbs = math.abs(velocityRot - bodyYaw)
+			local relativeVelocity = {math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.cos(math.rad(directionAbs)), math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.sin(math.rad(directionAbs))}
+			VelocityAverage[1] = (#VelocityData[1] * VelocityAverage[1] + relativeVelocity[1]) / (#VelocityData[1] + 1)
+			table.insert(VelocityData[1], relativeVelocity[1])
+			VelocityAverage[2] = (#VelocityData[2] * VelocityAverage[2] + velocity.y) / (#VelocityData[2] + 1)
+			table.insert(VelocityData[2], velocity.y)
+			VelocityAverage[3] = (#VelocityData[3] * VelocityAverage[3] + relativeVelocity[2]) / (#VelocityData[3] + 1)
+			table.insert(VelocityData[3], relativeVelocity[2])
+			local lookRotDelta = math.abs(lookRot - LookRotPrevRender)
+			lookRotDelta = lookRotDelta >= 180 and 360 - lookRotDelta or lookRotDelta
+			local lookRotDeltaData = lookRotDelta * FPS
+			if lookRotDelta < 20 and lookRotDelta ~= LookRotDeltaPrevRender then
+				VelocityAverage[4] = (#VelocityData[4] * VelocityAverage[4] + lookRotDeltaData) / (#VelocityData[4] + 1)
+				table.insert(VelocityData[4], lookRotDeltaData)
 			else
-				rightHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 - VelocityAverage[4] * 0.03, hairLimit[1][1]), hairLimit[1][2]) - lookDir.y * 90, math.min(math.max(-VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
-				leftHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 - VelocityAverage[4] * 0.03, hairLimit[3][1]), hairLimit[3][2]) - lookDir.y * 90, math.min(math.max(VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
-				backRibbon:setRot(math.min(math.max(-VelocityAverage[1] * 160 - VelocityAverage[4] * 0.05, hairLimit[5][1]), hairLimit[5][2]), 0, 0)
+				VelocityAverage[4] = (#VelocityData[4] * VelocityAverage[4]) / (#VelocityData[4] + 1)
+				table.insert(VelocityData[4], 0)
 			end
+			--古いデータの切り捨て
+			for index, velocityTable in ipairs(VelocityData) do
+				while #velocityTable > FPS * 0.25 / HairRenderLimit do
+					if #velocityTable >= 2 then
+						VelocityAverage[index] = (#velocityTable * VelocityAverage[index] - velocityTable[1]) / (#velocityTable - 1)
+					end
+					table.remove(velocityTable, 1)
+				end
+			end
+			--求めた平均から髪の角度を決定する。
+			local hairLimit = {{-60, 80}, {-30, 30}, {-60, 80}, {-30, 30}, {-60, -25}}
+			if General.hasItem(player:getItem(5)) == "minecraft:elytra" then
+				hairLimit[5] = {-25, -25}
+			end
+			local playerPose = player:getPose()
+			if playerPose == "FALL_FLYING" then
+				hairLimit[1] = {-40, 80}
+				hairLimit[3] = {-40, 80}
+				rightHair:setRot(math.min(math.max(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, hairLimit[1][1]), hairLimit[1][2]), math.min(math.max(-VelocityAverage[1] * 20, hairLimit[2][1]), hairLimit[2][2]), 0)
+				leftHair:setRot(math.min(math.max(hairLimit[3][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, hairLimit[3][1]), hairLimit[3][2]), math.min(math.max(VelocityAverage[1] * 20, hairLimit[2][1]), hairLimit[2][2]), 0)
+				backRibbon:setRot(hairLimit[5][2], 0, 0)
+			elseif playerPose == "SWIMMING" then
+				hairLimit[1] = {-40, 80}
+				hairLimit[3] = {-40, 80}
+				rightHair:setRot(math.min(math.max(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[1][1]), hairLimit[1][2]), math.min(math.max(-VelocityAverage[1] * 80, hairLimit[2][1]), hairLimit[2][2]), 0)
+				leftHair:setRot(math.min(math.max(hairLimit[3][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[3][1]), hairLimit[3][2]), math.min(math.max(VelocityAverage[1] * 80, hairLimit[2][1]), hairLimit[2][2]), 0)
+				backRibbon:setRot(hairLimit[5][2], 0, 0)
+			else
+				if math.floor(VelocityAverage[2] * 100 + 0.5) / 100 < 0 then
+					rightHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 + VelocityAverage[2] * 80 - VelocityAverage[4] * 0.03, hairLimit[1][1]), hairLimit[1][2]) - lookDir.y * 90, math.min(math.max(-VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
+					leftHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 + VelocityAverage[2] * 80 - VelocityAverage[4] * 0.03, hairLimit[3][1]), hairLimit[3][2]) - lookDir.y * 90, math.min(math.max(VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
+					backRibbon:setRot(math.min(math.max(-VelocityAverage[1] * 160 + VelocityAverage[2] * 80 - VelocityAverage[4] * 0.05, hairLimit[5][1]), hairLimit[5][2]), 0, 0)
+				else
+					rightHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 - VelocityAverage[4] * 0.03, hairLimit[1][1]), hairLimit[1][2]) - lookDir.y * 90, math.min(math.max(-VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
+					leftHair:setRot(math.min(math.max(-VelocityAverage[1] * 120 - VelocityAverage[4] * 0.03, hairLimit[3][1]), hairLimit[3][2]) - lookDir.y * 90, math.min(math.max(VelocityAverage[1] * 20 - VelocityAverage[4] * 0.005, hairLimit[2][1]), hairLimit[2][2]), 0)
+					backRibbon:setRot(math.min(math.max(-VelocityAverage[1] * 160 - VelocityAverage[4] * 0.05, hairLimit[5][1]), hairLimit[5][2]), 0, 0)
+				end
+			end
+			HairRenderCount = 0
+			LookRotDeltaPrevRender = lookRotDelta
+		elseif not client.isPaused() then
+			HairRenderCount = HairRenderCount + 1
 		end
-		HairRenderCount = 0
-		LookRotDeltaPrevRender = lookRotDelta
-	elseif not client.isPaused() then
-		HairRenderCount = HairRenderCount + 1
+	else
+		rightHair:setRot(0, 0, 0)
+		leftHair:setRot(0, 0, 0)
+		backRibbon:setRot(-25, 0, 0)
 	end
 	LookRotPrevRender = lookRot
 end)
