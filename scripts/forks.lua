@@ -40,7 +40,7 @@ events.TICK:register(function ()
 		else
 			rightFork:setRot(0, 0, 0)
 		end
-		rightFork:setSecondaryRenderType(rightHandItem:hasGlint() and "GLINT" or "NONE")
+		rightFork:setSecondaryRenderType(rightHandItem:hasGlint() and "GLINT" or nil)
 	else
 		vanilla_model.RIGHT_ITEM:setVisible(true)
 		rightFork:setVisible(false)
