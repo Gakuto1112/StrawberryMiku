@@ -10509,7 +10509,7 @@
             "color": 0,
             "uuid": "55e169cd-0296-eacc-1dbd-53dd7b44ec15",
             "export": true,
-            "isOpen": false,
+            "isOpen": true,
             "locked": false,
             "visibility": true,
             "autouv": 0,
@@ -10521,7 +10521,7 @@
                     "origin": [
                         0,
                         32,
-                        4
+                        2
                     ],
                     "color": 0,
                     "uuid": "4a95c236-e051-6f37-765d-8f16014f8181",
@@ -10532,231 +10532,265 @@
                     "autouv": 0,
                     "children": [
                         {
-                            "name": "HeadTailRight",
+                            "name": "HeadTailRightPivot",
                             "origin": [
                                 3,
                                 32,
                                 2
                             ],
-                            "rotation": [
-                                -10,
-                                0,
-                                30
-                            ],
                             "color": 0,
-                            "uuid": "aae7128b-7068-d5be-8b76-0e9eb133bead",
+                            "uuid": "ad294580-a15f-4981-df14-5728097eabdf",
                             "export": true,
                             "isOpen": true,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,
                             "children": [
-                                "cda511ba-bb70-3362-5127-f1199bf1969e",
-                                "83d1e64c-ac7d-4416-0801-e202663d66d1",
-                                "c5ba6e5f-5a52-bfb8-bac4-72d854f9ad70",
-                                "21e4d579-9073-f1a6-39fd-282c756bd3b7",
-                                "34a0e6c4-3402-066e-654f-9a7606bdb8ad",
-                                "38d8d45f-9fb3-da50-1be0-d8f9bbecad5e",
-                                "77a5a276-6e1f-2d8c-fbd6-90da891fe162",
-                                "30482e48-00e6-3eb2-3425-e14157148cfa",
-                                "002c30e5-4d00-3c3f-a18c-c49068f126ec",
                                 {
-                                    "name": "HeadTailRight10",
+                                    "name": "HeadTailRight",
                                     "origin": [
                                         3,
                                         32,
                                         2
                                     ],
-                                    "color": 0,
-                                    "uuid": "e145b265-9f58-6c46-e6dc-b2a8de215f11",
-                                    "export": true,
-                                    "isOpen": true,
-                                    "locked": false,
-                                    "visibility": true,
-                                    "autouv": 0,
-                                    "children": [
-                                        "cd4b25a8-509d-d5ae-43e1-dc1ad21dae92",
-                                        {
-                                            "name": "HeadTailRightRibbon",
-                                            "origin": [
-                                                0,
-                                                6,
-                                                3
-                                            ],
-                                            "color": 0,
-                                            "uuid": "410213af-53ad-08f6-2f94-68c30890f26d",
-                                            "export": true,
-                                            "isOpen": true,
-                                            "locked": false,
-                                            "visibility": true,
-                                            "autouv": 0,
-                                            "children": [
-                                                "3fd3d3dc-d02e-50d5-3360-eecc2fe00509",
-                                                {
-                                                    "name": "HeadTailRightRibbonLine",
-                                                    "origin": [
-                                                        3.000000000000001,
-                                                        8,
-                                                        2
-                                                    ],
-                                                    "color": 0,
-                                                    "uuid": "cfafb21a-6ac0-472f-c506-d15c877003af",
-                                                    "export": true,
-                                                    "isOpen": true,
-                                                    "locked": false,
-                                                    "visibility": true,
-                                                    "autouv": 0,
-                                                    "children": [
-                                                        "808ba4de-105e-2fe5-8d6c-0c25be23fce1",
-                                                        "90796b47-61dc-0572-b020-b2ed2ea7ee55"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                "b9bca185-238a-6cbd-67a2-61bf811c0bee",
-                                {
-                                    "name": "HeadTailRightFlowers",
-                                    "origin": [
-                                        3,
-                                        32,
-                                        2
+                                    "rotation": [
+                                        -10,
+                                        0,
+                                        30
                                     ],
                                     "color": 0,
-                                    "uuid": "d2ecbc1c-d628-37f4-fd38-1a1dc92b1c80",
+                                    "uuid": "aae7128b-7068-d5be-8b76-0e9eb133bead",
                                     "export": true,
                                     "isOpen": false,
                                     "locked": false,
                                     "visibility": true,
                                     "autouv": 0,
                                     "children": [
-                                        "85f0a859-70c7-72ea-e082-11a046fee544",
-                                        "a9264d61-7832-d399-06ea-56cde63520b1",
-                                        "3a667708-9d13-e959-3abe-f44d48357b7d",
-                                        "6f45f95d-5b92-a622-79a3-ef0c7486ac2d",
-                                        "7229195b-0aa4-5d41-476a-f2672ecc74ac",
-                                        "99d8692d-aaae-9531-9b33-f8e4a45896c4",
-                                        "575970a9-9377-35dc-9bd8-018922385fc1",
-                                        "dba9cb48-7ccb-4688-9d66-6ce0f37848e0",
-                                        "29a7c78e-5ef2-72b5-dd7e-fb06f6ef9a2a",
-                                        "50581d06-9c9d-052a-2932-0611210381cb",
-                                        "caa58ff2-2685-303f-730b-3b59df1519a4"
+                                        "cda511ba-bb70-3362-5127-f1199bf1969e",
+                                        "83d1e64c-ac7d-4416-0801-e202663d66d1",
+                                        "c5ba6e5f-5a52-bfb8-bac4-72d854f9ad70",
+                                        "21e4d579-9073-f1a6-39fd-282c756bd3b7",
+                                        "34a0e6c4-3402-066e-654f-9a7606bdb8ad",
+                                        "38d8d45f-9fb3-da50-1be0-d8f9bbecad5e",
+                                        "77a5a276-6e1f-2d8c-fbd6-90da891fe162",
+                                        "30482e48-00e6-3eb2-3425-e14157148cfa",
+                                        "002c30e5-4d00-3c3f-a18c-c49068f126ec",
+                                        {
+                                            "name": "HeadTailRight10",
+                                            "origin": [
+                                                3,
+                                                32,
+                                                2
+                                            ],
+                                            "color": 0,
+                                            "uuid": "e145b265-9f58-6c46-e6dc-b2a8de215f11",
+                                            "export": true,
+                                            "isOpen": true,
+                                            "locked": false,
+                                            "visibility": true,
+                                            "autouv": 0,
+                                            "children": [
+                                                "cd4b25a8-509d-d5ae-43e1-dc1ad21dae92",
+                                                {
+                                                    "name": "HeadTailRightRibbon",
+                                                    "origin": [
+                                                        0,
+                                                        6,
+                                                        3
+                                                    ],
+                                                    "color": 0,
+                                                    "uuid": "410213af-53ad-08f6-2f94-68c30890f26d",
+                                                    "export": true,
+                                                    "isOpen": true,
+                                                    "locked": false,
+                                                    "visibility": true,
+                                                    "autouv": 0,
+                                                    "children": [
+                                                        "3fd3d3dc-d02e-50d5-3360-eecc2fe00509",
+                                                        {
+                                                            "name": "HeadTailRightRibbonLine",
+                                                            "origin": [
+                                                                3.000000000000001,
+                                                                8,
+                                                                2
+                                                            ],
+                                                            "color": 0,
+                                                            "uuid": "cfafb21a-6ac0-472f-c506-d15c877003af",
+                                                            "export": true,
+                                                            "isOpen": true,
+                                                            "locked": false,
+                                                            "visibility": true,
+                                                            "autouv": 0,
+                                                            "children": [
+                                                                "808ba4de-105e-2fe5-8d6c-0c25be23fce1",
+                                                                "90796b47-61dc-0572-b020-b2ed2ea7ee55"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "b9bca185-238a-6cbd-67a2-61bf811c0bee",
+                                        {
+                                            "name": "HeadTailRightFlowers",
+                                            "origin": [
+                                                3,
+                                                32,
+                                                2
+                                            ],
+                                            "color": 0,
+                                            "uuid": "d2ecbc1c-d628-37f4-fd38-1a1dc92b1c80",
+                                            "export": true,
+                                            "isOpen": false,
+                                            "locked": false,
+                                            "visibility": true,
+                                            "autouv": 0,
+                                            "children": [
+                                                "85f0a859-70c7-72ea-e082-11a046fee544",
+                                                "a9264d61-7832-d399-06ea-56cde63520b1",
+                                                "3a667708-9d13-e959-3abe-f44d48357b7d",
+                                                "6f45f95d-5b92-a622-79a3-ef0c7486ac2d",
+                                                "7229195b-0aa4-5d41-476a-f2672ecc74ac",
+                                                "99d8692d-aaae-9531-9b33-f8e4a45896c4",
+                                                "575970a9-9377-35dc-9bd8-018922385fc1",
+                                                "dba9cb48-7ccb-4688-9d66-6ce0f37848e0",
+                                                "29a7c78e-5ef2-72b5-dd7e-fb06f6ef9a2a",
+                                                "50581d06-9c9d-052a-2932-0611210381cb",
+                                                "caa58ff2-2685-303f-730b-3b59df1519a4"
+                                            ]
+                                        }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "name": "HeadTailLeft",
+                            "name": "HeadTailLeftPivot",
                             "origin": [
-                                -3,
+                                -2,
                                 32,
                                 2
                             ],
-                            "rotation": [
-                                -10,
-                                0,
-                                -30
-                            ],
                             "color": 0,
-                            "uuid": "70a77b62-ac02-b3df-60ef-161dffa404b7",
+                            "uuid": "b2efb26d-be8a-3230-760f-971d79d504f0",
                             "export": true,
-                            "isOpen": true,
+                            "isOpen": false,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,
                             "children": [
-                                "c3a0f4ec-9f1b-e2a2-bcd5-7307b8cbc2f8",
-                                "8e42b27b-816e-c40d-e1a4-fce779498e39",
-                                "4d6cce3f-0fa4-8b65-152c-f09cd665eea4",
-                                "abea45bd-0ce9-9037-a662-70f6c9c7563b",
-                                "c5fffdc2-07af-8ba2-3b52-64cdedfcc2c0",
-                                "98d91fcc-38a4-e934-1579-1482a13a178c",
-                                "3874ef86-807b-9ec5-7bd8-f601d02b0ac9",
-                                "61a3a864-5e77-9e12-5530-607362371d45",
-                                "788b830a-b61f-2520-cd58-7ae36e694b65",
                                 {
-                                    "name": "HeadTailLeft10",
+                                    "name": "HeadTailLeft",
                                     "origin": [
                                         -3,
                                         32,
                                         2
                                     ],
-                                    "color": 0,
-                                    "uuid": "b0d36593-dfc2-ac7b-bae8-b892e667af42",
-                                    "export": true,
-                                    "isOpen": true,
-                                    "locked": false,
-                                    "visibility": true,
-                                    "autouv": 0,
-                                    "children": [
-                                        "af19afa7-3317-a606-cd42-6d6d10001740",
-                                        {
-                                            "name": "HeadTailLeftRibbon",
-                                            "origin": [
-                                                0,
-                                                6,
-                                                3
-                                            ],
-                                            "color": 0,
-                                            "uuid": "1ab5ceef-5728-df8d-1a9d-415e72ce666b",
-                                            "export": true,
-                                            "isOpen": true,
-                                            "locked": false,
-                                            "visibility": true,
-                                            "autouv": 0,
-                                            "children": [
-                                                "98cfa867-6592-de88-372c-f948f797c263",
-                                                {
-                                                    "name": "HeadTailLeftRibbonLine",
-                                                    "origin": [
-                                                        -3.000000000000001,
-                                                        8,
-                                                        2
-                                                    ],
-                                                    "color": 0,
-                                                    "uuid": "d031254f-8a4d-d519-b40a-d20d387019aa",
-                                                    "export": true,
-                                                    "isOpen": true,
-                                                    "locked": false,
-                                                    "visibility": true,
-                                                    "autouv": 0,
-                                                    "children": [
-                                                        "4434dbe8-5256-3c64-5f19-f57bd98d8218",
-                                                        "2817c79d-92ce-495f-444f-96a87235a5b8"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                "62cd316c-6078-7d56-e738-6c2c675557a8",
-                                {
-                                    "name": "HeadTailLeftFlowers",
-                                    "origin": [
-                                        -3,
-                                        32,
-                                        2
+                                    "rotation": [
+                                        -10,
+                                        0,
+                                        -30
                                     ],
                                     "color": 0,
-                                    "uuid": "dc543f0d-4f1a-f045-2c7d-1722e9bc3c58",
+                                    "uuid": "70a77b62-ac02-b3df-60ef-161dffa404b7",
                                     "export": true,
                                     "isOpen": false,
                                     "locked": false,
                                     "visibility": true,
                                     "autouv": 0,
                                     "children": [
-                                        "768745bb-9569-8eff-770b-5ac7b0884c38",
-                                        "080d2bd1-6a1c-8cfc-9f5e-0c15bb584644",
-                                        "425b1274-fb59-a549-ac58-e6286cb17ef7",
-                                        "2dffa228-eb9f-6c6d-d423-d9ab13e604a0",
-                                        "711a9d3b-b6d4-4d3e-fdbd-a21e83419d89",
-                                        "33c6b6b2-e6a5-1cea-1a46-992cc556a046",
-                                        "9fb8956f-a3c6-3b59-5ef8-5b3c9cc6948d",
-                                        "e886e7f5-5bba-01df-d5d7-32712bbbddb0",
-                                        "37714daf-0011-fb7b-fdef-590c24572065",
-                                        "9f2985c8-895d-1dbd-922f-e4fba5a82f61",
-                                        "6e6697ca-733b-4094-b72b-adc9f653fd30"
+                                        "c3a0f4ec-9f1b-e2a2-bcd5-7307b8cbc2f8",
+                                        "8e42b27b-816e-c40d-e1a4-fce779498e39",
+                                        "4d6cce3f-0fa4-8b65-152c-f09cd665eea4",
+                                        "abea45bd-0ce9-9037-a662-70f6c9c7563b",
+                                        "c5fffdc2-07af-8ba2-3b52-64cdedfcc2c0",
+                                        "98d91fcc-38a4-e934-1579-1482a13a178c",
+                                        "3874ef86-807b-9ec5-7bd8-f601d02b0ac9",
+                                        "61a3a864-5e77-9e12-5530-607362371d45",
+                                        "788b830a-b61f-2520-cd58-7ae36e694b65",
+                                        {
+                                            "name": "HeadTailLeft10",
+                                            "origin": [
+                                                -3,
+                                                32,
+                                                2
+                                            ],
+                                            "color": 0,
+                                            "uuid": "b0d36593-dfc2-ac7b-bae8-b892e667af42",
+                                            "export": true,
+                                            "isOpen": true,
+                                            "locked": false,
+                                            "visibility": true,
+                                            "autouv": 0,
+                                            "children": [
+                                                "af19afa7-3317-a606-cd42-6d6d10001740",
+                                                {
+                                                    "name": "HeadTailLeftRibbon",
+                                                    "origin": [
+                                                        0,
+                                                        6,
+                                                        3
+                                                    ],
+                                                    "color": 0,
+                                                    "uuid": "1ab5ceef-5728-df8d-1a9d-415e72ce666b",
+                                                    "export": true,
+                                                    "isOpen": true,
+                                                    "locked": false,
+                                                    "visibility": true,
+                                                    "autouv": 0,
+                                                    "children": [
+                                                        "98cfa867-6592-de88-372c-f948f797c263",
+                                                        {
+                                                            "name": "HeadTailLeftRibbonLine",
+                                                            "origin": [
+                                                                -3.000000000000001,
+                                                                8,
+                                                                2
+                                                            ],
+                                                            "color": 0,
+                                                            "uuid": "d031254f-8a4d-d519-b40a-d20d387019aa",
+                                                            "export": true,
+                                                            "isOpen": true,
+                                                            "locked": false,
+                                                            "visibility": true,
+                                                            "autouv": 0,
+                                                            "children": [
+                                                                "4434dbe8-5256-3c64-5f19-f57bd98d8218",
+                                                                "2817c79d-92ce-495f-444f-96a87235a5b8"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "62cd316c-6078-7d56-e738-6c2c675557a8",
+                                        {
+                                            "name": "HeadTailLeftFlowers",
+                                            "origin": [
+                                                -3,
+                                                32,
+                                                2
+                                            ],
+                                            "color": 0,
+                                            "uuid": "dc543f0d-4f1a-f045-2c7d-1722e9bc3c58",
+                                            "export": true,
+                                            "isOpen": false,
+                                            "locked": false,
+                                            "visibility": true,
+                                            "autouv": 0,
+                                            "children": [
+                                                "768745bb-9569-8eff-770b-5ac7b0884c38",
+                                                "080d2bd1-6a1c-8cfc-9f5e-0c15bb584644",
+                                                "425b1274-fb59-a549-ac58-e6286cb17ef7",
+                                                "2dffa228-eb9f-6c6d-d423-d9ab13e604a0",
+                                                "711a9d3b-b6d4-4d3e-fdbd-a21e83419d89",
+                                                "33c6b6b2-e6a5-1cea-1a46-992cc556a046",
+                                                "9fb8956f-a3c6-3b59-5ef8-5b3c9cc6948d",
+                                                "e886e7f5-5bba-01df-d5d7-32712bbbddb0",
+                                                "37714daf-0011-fb7b-fdef-590c24572065",
+                                                "9f2985c8-895d-1dbd-922f-e4fba5a82f61",
+                                                "6e6697ca-733b-4094-b72b-adc9f653fd30"
+                                            ]
+                                        }
                                     ]
                                 }
                             ]
@@ -11143,7 +11177,7 @@
                             "color": 0,
                             "uuid": "c46717f3-78f4-510d-07d3-f3598d07ed49",
                             "export": true,
-                            "isOpen": true,
+                            "isOpen": false,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,
@@ -11173,7 +11207,7 @@
                             "color": 0,
                             "uuid": "03fbade0-18bd-36fb-9841-be8c02881042",
                             "export": true,
-                            "isOpen": true,
+                            "isOpen": false,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,

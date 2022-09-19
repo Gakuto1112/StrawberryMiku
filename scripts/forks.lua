@@ -5,17 +5,6 @@ ForkClass = {}
 
 ForkRoot = models.models.forks
 
----渡されたItemStackのアイテムタイプを返す。nilや"minecraft:air"の場合は"none"と返す。
----@param item ItemStack アイテムタイプを調べるItemStack
----@return string
-function hasItem(item)
-	if item == nil then
-		return "none"
-	else
-		return item.id == "minecraft:air" and "none" or item.id
-	end
-end
-
 events.TICK:register(function ()
 	local rightArm = models.models.main.RightArm
 	local leftArm = models.models.main.LeftArm
@@ -26,7 +15,7 @@ events.TICK:register(function ()
 	local leftHandItem = player:getHeldItem(not leftHanded)
 	local activeHand = player:getActiveHand()
 	local isFirstPerson = renderer:isFirstPerson()
-	if hasItem(rightHandItem) == "minecraft:trident" then
+	if General.hasItem(rightHandItem) == "minecraft:trident" then
 		vanilla_model.RIGHT_ITEM:setVisible(false)
 		rightFork:setVisible(true)
 		if isFirstPerson then
@@ -58,7 +47,7 @@ events.TICK:register(function ()
 		rightArm:setVisible(true)
 		rightArm:setRot(0, 0, 0)
 	end
-	if hasItem(leftHandItem) == "minecraft:trident" then
+	if General.hasItem(leftHandItem) == "minecraft:trident" then
 		vanilla_model.LEFT_ITEM:setVisible(false)
 		leftFork:setVisible(true)
 		if isFirstPerson then
@@ -83,7 +72,7 @@ events.TICK:register(function ()
 		else
 			leftFork:setRot(0, 0, 0)
 		end
-		leftFork:setSecondaryRenderType(leftHandItem:hasGlint() and "GLINT" or "NONE")
+		leftFork:setSecondaryRenderType(leftHandItem:hasGlint() and "GLINT" or nil)
 	else
 		vanilla_model.LEFT_ITEM:setVisible(true)
 		leftFork:setVisible(false)
