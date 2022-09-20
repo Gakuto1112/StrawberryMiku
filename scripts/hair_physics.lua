@@ -34,6 +34,7 @@ events.RENDER:register(function ()
 			local directionAbsRight = math.abs(velocityRot - (lookRot + 90) % 360)
 			directionAbsRight = directionAbsRight > 180 and 360 - directionAbsRight or directionAbsRight
 			local relativeVelocity = {math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.cos(math.rad(directionAbsFront)), math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.cos(math.rad(directionAbsRight))}
+			relativeVelocity[2] = lookDir.y < 0 and -relativeVelocity[2] or relativeVelocity[2]
 			VelocityAverage[1] = (#VelocityData[1] * VelocityAverage[1] + relativeVelocity[1]) / (#VelocityData[1] + 1)
 			table.insert(VelocityData[1], relativeVelocity[1])
 			VelocityAverage[2] = (#VelocityData[2] * VelocityAverage[2] + velocity.y) / (#VelocityData[2] + 1)
