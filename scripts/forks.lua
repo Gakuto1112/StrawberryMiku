@@ -21,6 +21,8 @@ events.TICK:register(function ()
 		rightFork:setVisible(true)
 		if isFirstPerson then
 			rightArm:setVisible(false)
+			rightArm:setRot(0, 0, 0)
+			rightFork:setRot(0, 0, 0)
 			if player:isUsingItem() and ((activeHand == "MAIN_HAND" and not leftHanded) or (activeHand == "OFF_HAND" and leftHanded)) then
 				ForkRoot.RightArm:setPos(17, -5, -15)
 				ForkRoot.RightArm:setRot(-100, 20, -50)
@@ -33,26 +35,33 @@ events.TICK:register(function ()
 		else
 			rightArm:setVisible(true)
 			ForkRoot.RightArm:setPos(0, 0, 0)
-			ForkRoot.RightArm:setRot(0, 0, 0)
 			animations["forks"]["right_fork_vibration"]:stop()
-		end
-		if player:isUsingItem() and ((activeHand == "MAIN_HAND" and not leftHanded) or (activeHand == "OFF_HAND" and leftHanded)) and not isFirstPerson then
-			rightFork:setRot(0, 180, 180)
-		else
-			rightFork:setRot(0, 0, 0)
+			if player:isUsingItem() and ((activeHand == "MAIN_HAND" and not leftHanded) or (activeHand == "OFF_HAND" and leftHanded)) then
+				rightFork:setRot(0, 180, 180)
+				rightArm:setRot(0, 0, 0)
+				ForkRoot.RightArm:setRot(0, 0, 0)
+			else
+				rightFork:setRot(20, 180, 180)
+				rightArm:setRot(70, 0, 0)
+				ForkRoot.RightArm:setRot(70, 0, 0)
+			end
 		end
 		rightFork:setSecondaryRenderType(rightHandItem:hasGlint() and "GLINT" or nil)
 	else
 		vanilla_model.RIGHT_ITEM:setVisible(true)
 		rightFork:setVisible(false)
 		rightArm:setVisible(true)
+		rightArm:setRot(0, 0, 0)
+		ForkRoot.RightArm:setRot(0, 0, 0)
 		animations["forks"]["right_fork_vibration"]:stop()
 	end
 	if General.hasItem(leftHandItem) == "minecraft:trident" then
-		leftArm:setVisible(false)
 		vanilla_model.LEFT_ITEM:setVisible(false)
 		leftFork:setVisible(true)
 		if isFirstPerson then
+			leftArm:setVisible(false)
+			leftArm:setRot(0, 0, 0)
+			leftFork:setRot(0, 0, 0)
 			if player:isUsingItem() and ((activeHand == "OFF_HAND" and not leftHanded) or (activeHand == "MAIN_HAND" and leftHanded)) then
 				ForkRoot.LeftArm:setPos(-17, -5, -15)
 				ForkRoot.LeftArm:setRot(-100, -20, 50)
@@ -65,19 +74,24 @@ events.TICK:register(function ()
 		else
 			leftArm:setVisible(true)
 			ForkRoot.LeftArm:setPos(0, 0, 0)
-			ForkRoot.LeftArm:setRot(0, 0, 0)
 			animations["forks"]["left_fork_vibration"]:stop()
-		end
-		if player:isUsingItem() and ((activeHand == "OFF_HAND" and not leftHanded) or (activeHand == "MAIN_HAND" and leftHanded)) and not isFirstPerson then
-			leftFork:setRot(0, 180, 180)
-		else
-			leftFork:setRot(0, 0, 0)
+			if player:isUsingItem() and ((activeHand == "OFF_HAND" and not leftHanded) or (activeHand == "MAIN_HAND" and leftHanded)) and not isFirstPerson then
+				leftFork:setRot(0, 180, 180)
+				leftArm:setRot(0, 0, 0)
+				ForkRoot.LeftArm:setRot(0, 0, 0)
+			else
+				leftFork:setRot(20, 180, 180)
+				leftArm:setRot(70, 0, 0)
+				ForkRoot.LeftArm:setRot(70, 0, 0)
+			end
 		end
 		leftFork:setSecondaryRenderType(leftHandItem:hasGlint() and "GLINT" or nil)
 	else
 		vanilla_model.LEFT_ITEM:setVisible(true)
 		leftFork:setVisible(false)
 		leftArm:setVisible(true)
+		leftArm:setRot(0, 0, 0)
+		ForkRoot.LeftArm:setRot(0, 0, 0)
 		animations["forks"]["left_fork_vibration"]:stop()
 	end
 end)
