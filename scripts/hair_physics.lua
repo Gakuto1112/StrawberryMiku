@@ -99,6 +99,8 @@ events.RENDER:register(function ()
 		else
 			rightHair:setRot(0, 0, 0)
 			leftHair:setRot(0, 0, 0)
+			rightHeadRibbon:setRot(0, 0, 30)
+			leftHeadRibbon:setRot(0, 0, -30)
 			backRibbon:setRot(-25, 0, 0)
 		end
 		HairRenderCount = 0
