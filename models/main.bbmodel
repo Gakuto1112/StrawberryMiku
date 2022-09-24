@@ -5153,9 +5153,9 @@
                 },
                 "south": {
                     "uv": [
-                        7,
-                        152,
                         17,
+                        152,
+                        7,
                         154
                     ],
                     "texture": 0
@@ -5172,17 +5172,19 @@
                     "uv": [
                         0,
                         0,
-                        30.625,
+                        0,
                         0
-                    ]
+                    ],
+                    "texture": null
                 },
                 "down": {
                     "uv": [
                         0,
                         0,
-                        30.625,
+                        0,
                         0
-                    ]
+                    ],
+                    "texture": null
                 }
             },
             "type": "cube",
@@ -5214,56 +5216,56 @@
                 "north": {
                     "uv": [
                         7,
-                        152,
+                        154,
                         17,
-                        154
+                        156
                     ],
                     "texture": 0
                 },
                 "east": {
                     "uv": [
-                        7,
-                        152,
-                        17,
-                        154
+                        0,
+                        0,
+                        0,
+                        0
                     ],
-                    "texture": 0
+                    "texture": null
                 },
                 "south": {
                     "uv": [
-                        7,
-                        152,
                         17,
-                        154
+                        154,
+                        7,
+                        156
                     ],
                     "texture": 0
                 },
                 "west": {
                     "uv": [
-                        7,
-                        152,
-                        17,
-                        154
+                        0,
+                        0,
+                        0,
+                        0
                     ],
-                    "texture": 0
+                    "texture": null
                 },
                 "up": {
                     "uv": [
-                        7,
-                        152,
-                        17,
-                        154
+                        0,
+                        0,
+                        0,
+                        0
                     ],
-                    "texture": 0
+                    "texture": null
                 },
                 "down": {
                     "uv": [
-                        7,
-                        152,
-                        17,
-                        154
+                        0,
+                        0,
+                        0,
+                        0
                     ],
-                    "texture": 0
+                    "texture": null
                 }
             },
             "type": "cube",
@@ -5526,7 +5528,7 @@
             ],
             "autouv": 0,
             "color": 2,
-            "inflate": 0.001,
+            "inflate": 0.002,
             "rotation": [
                 0,
                 0,
@@ -6010,6 +6012,7 @@
             ],
             "autouv": 0,
             "color": 4,
+            "inflate": 0.001,
             "origin": [
                 6.249999999999998,
                 32.25,
@@ -6327,7 +6330,7 @@
             ],
             "autouv": 0,
             "color": 2,
-            "inflate": 0.001,
+            "inflate": 0.002,
             "rotation": [
                 0,
                 0,
@@ -6811,6 +6814,7 @@
             ],
             "autouv": 0,
             "color": 4,
+            "inflate": 0.001,
             "origin": [
                 -6.249999999999998,
                 32.25,
@@ -10833,7 +10837,7 @@
             "color": 0,
             "uuid": "55e169cd-0296-eacc-1dbd-53dd7b44ec15",
             "export": true,
-            "isOpen": false,
+            "isOpen": true,
             "locked": false,
             "visibility": true,
             "autouv": 0,
@@ -11131,7 +11135,7 @@
                     "color": 0,
                     "uuid": "4e4466ed-2a4b-16ce-812f-b99baa72c224",
                     "export": true,
-                    "isOpen": false,
+                    "isOpen": true,
                     "locked": false,
                     "visibility": true,
                     "autouv": 0,
@@ -11309,7 +11313,7 @@
                                             "color": 0,
                                             "uuid": "56b86af6-a28a-e9b2-379d-966db0a7c1a1",
                                             "export": true,
-                                            "isOpen": false,
+                                            "isOpen": true,
                                             "locked": false,
                                             "visibility": true,
                                             "autouv": 0,
