@@ -5690,11 +5690,6 @@
             "autouv": 0,
             "color": 0,
             "inflate": 0.001,
-            "rotation": [
-                0,
-                0,
-                30
-            ],
             "origin": [
                 4.75,
                 32.5,
@@ -5776,7 +5771,7 @@
             "rotation": [
                 0,
                 0,
-                45
+                15
             ],
             "origin": [
                 4.75,
@@ -6492,11 +6487,6 @@
             "autouv": 0,
             "color": 0,
             "inflate": 0.001,
-            "rotation": [
-                0,
-                0,
-                -30
-            ],
             "origin": [
                 -4.75,
                 32.5,
@@ -6578,7 +6568,7 @@
             "rotation": [
                 0,
                 0,
-                -45
+                -15
             ],
             "origin": [
                 -4.75,
@@ -10889,7 +10879,7 @@
                                     "color": 0,
                                     "uuid": "aae7128b-7068-d5be-8b76-0e9eb133bead",
                                     "export": true,
-                                    "isOpen": false,
+                                    "isOpen": true,
                                     "locked": false,
                                     "visibility": true,
                                     "autouv": 0,
@@ -11217,9 +11207,14 @@
                                                 {
                                                     "name": "BrimRightRibbonLine",
                                                     "origin": [
-                                                        5.75,
-                                                        26.5,
-                                                        0.75
+                                                        4.75,
+                                                        32.5,
+                                                        -0.25
+                                                    ],
+                                                    "rotation": [
+                                                        0,
+                                                        0,
+                                                        30
                                                     ],
                                                     "color": 0,
                                                     "uuid": "3de44a1f-0474-3704-5e92-7ce74c9c470c",
@@ -11322,9 +11317,14 @@
                                                 {
                                                     "name": "BrimLeftRibbonLine",
                                                     "origin": [
-                                                        -5.75,
-                                                        26.5,
-                                                        0.75
+                                                        -4.75,
+                                                        32.5,
+                                                        -0.25
+                                                    ],
+                                                    "rotation": [
+                                                        0,
+                                                        0,
+                                                        -30
                                                     ],
                                                     "color": 0,
                                                     "uuid": "9aaffe6b-5759-b2a0-977d-b558dc72cac6",

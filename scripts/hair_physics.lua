@@ -30,7 +30,6 @@ events.RENDER:register(function ()
 		local directionAbsRight = math.abs(velocityRot - (lookRot + 90) % 360)
 		directionAbsRight = directionAbsRight > 180 and 360 - directionAbsRight or directionAbsRight
 		local relativeVelocity = {math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.cos(math.rad(directionAbsFront)), math.sqrt(velocity.x ^ 2 + velocity.z ^ 2) * math.cos(math.rad(directionAbsRight))}
-		relativeVelocity[2] = lookDir.y < 0 and -relativeVelocity[2] or relativeVelocity[2]
 		VelocityAverage[1] = (#VelocityData[1] * VelocityAverage[1] + relativeVelocity[1]) / (#VelocityData[1] + 1)
 		table.insert(VelocityData[1], relativeVelocity[1])
 		VelocityAverage[2] = (#VelocityData[2] * VelocityAverage[2] + velocity.y) / (#VelocityData[2] + 1)
@@ -59,28 +58,42 @@ events.RENDER:register(function ()
 		local rightHair = models.models.main.Head.HeadTails.HeadTailRightPivot
 		local leftHair = models.models.main.Head.HeadTails.HeadTailLeftPivot
 		local backRibbon = models.models.main.Body.Dress.BackRibbonTop.BackRibbonTopLine
+		local rightHeadRibbon = models.models.main.Head.Brim.BrimOrnaments.BrimRight.BrimRightRibbon.BrimRightRibbonLine
+		local leftHeadRibbon = models.models.main.Head.Brim.BrimOrnaments.BrimLeft.BrimLeftRibbon.BrimLeftRibbonLine
 		if not renderer:isFirstPerson() or client:hasIrisShader() then
 			--求めた平均から髪の角度を決定する。
-			local hairLimit = {{-170, 80}, {-60, 60}, {-60, -25}} --1. 髪前後, 2. 髪左右, 3. 背中のリボン
+			local hairLimit = {{-170, 80}, {-60, 60}, {-60, -25}, {-170, 80}, {30, 100}, {-100, -30}} --1. 髪前後, 2. 髪左右, 3. 背中のリボン, 4. ブリムのリボン前後
 			if General.hasItem(player:getItem(5)) == "minecraft:elytra" then
 				hairLimit[3] = {-25, -25}
 			end
 			local playerPose = player:getPose()
+			local angularVelocityAbs = math.abs(VelocityAverage[4])
 			if playerPose == "FALL_FLYING" then
 				hairLimit[1] = {-40, 80}
+				hairLimit[4] = {-40, 80}
 				rightHair:setRot(math.clamp(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, hairLimit[1][1], hairLimit[1][2]), math.clamp(-VelocityAverage[1] * 20 + VelocityAverage[4] * 0.05, hairLimit[2][1], hairLimit[2][2]), 0)
 				leftHair:setRot(math.clamp(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, hairLimit[1][1], hairLimit[1][2]), math.clamp(VelocityAverage[1] * 20 + VelocityAverage[4] * 0.05, hairLimit[2][1], hairLimit[2][2]), 0)
+				rightHeadRibbon:setRot(math.clamp(hairLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 120, hairLimit[4][1], hairLimit[4][2]), 0, 30)
+				leftHeadRibbon:setRot(math.clamp(hairLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 120, hairLimit[4][1], hairLimit[4][2]), 0, -30)
 				backRibbon:setRot(hairLimit[3][2], 0, 0)
 			elseif playerPose == "SWIMMING" then
 				hairLimit[1] = {-40, 80}
+				hairLimit[4] = {-40, 80}
 				rightHair:setRot(math.clamp(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[1][1], hairLimit[1][2]), math.clamp(-VelocityAverage[1] * 80 + VelocityAverage[4] * 0.1, hairLimit[2][1], hairLimit[2][2]), 0)
 				leftHair:setRot(math.clamp(hairLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[1][1], hairLimit[1][2]), math.clamp(VelocityAverage[1] * 80 + VelocityAverage[4] * 0.1, hairLimit[2][1], hairLimit[2][2]), 0)
+				rightHeadRibbon:setRot(math.clamp(hairLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[4][1], hairLimit[4][2]), 0, 30)
+				leftHeadRibbon:setRot(math.clamp(hairLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, hairLimit[4][1], hairLimit[4][2]), 0, -30)
 				backRibbon:setRot(hairLimit[3][2], 0, 0)
 			else
 				local VelocityAverageXWithLimit = math.clamp(VelocityAverage[1], -0.6, 0.6)
-				local angularVelocityAbs = math.abs(VelocityAverage[4])
-				rightHair:setRot(math.clamp(-VelocityAverageXWithLimit * 120 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.03, hairLimit[1][1], hairLimit[1][2]) - lookDir.y * 90, math.clamp(-VelocityAverageXWithLimit * 20 - VelocityAverage[2] * 20 - VelocityAverage[3] * 240 + VelocityAverage[4] * 0.05 - angularVelocityAbs * 0.005, hairLimit[2][1], hairLimit[2][2]), 0)
-				leftHair:setRot(math.clamp(-VelocityAverageXWithLimit * 120 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.03, hairLimit[1][1], hairLimit[1][2]) - lookDir.y * 90, math.clamp(VelocityAverageXWithLimit * 20 + VelocityAverage[2] * 20 - VelocityAverage[3] * 240 + VelocityAverage[4] * 0.05 - angularVelocityAbs * 0.005, hairLimit[2][1], hairLimit[2][2]), 0)
+				local rightHairYZ = math.clamp(-VelocityAverageXWithLimit * 20 - VelocityAverage[2] * 20 - VelocityAverage[3] * 90 + VelocityAverage[4] * 0.05 - angularVelocityAbs * 0.005, hairLimit[2][1], hairLimit[2][2])
+				local rightHairRotX = rightHair:getRot().x
+				local leftHairYZ = math.clamp(VelocityAverageXWithLimit * 20 + VelocityAverage[2] * 20 - VelocityAverage[3] * 90 + VelocityAverage[4] * 0.05 - angularVelocityAbs * 0.005, hairLimit[2][1], hairLimit[2][2])
+				local leftHairRotX = leftHair:getRot().x
+				rightHair:setRot(math.clamp(-VelocityAverageXWithLimit * 120 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.03, hairLimit[1][1], hairLimit[1][2]) - lookDir.y * 90, rightHairYZ * -math.sin(math.rad(rightHairRotX)), rightHairYZ * math.cos(math.rad(rightHairRotX)))
+				leftHair:setRot(math.clamp(-VelocityAverageXWithLimit * 120 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.03, hairLimit[1][1], hairLimit[1][2]) - lookDir.y * 90, leftHairYZ * -math.sin(math.rad(leftHairRotX)), leftHairYZ * math.cos(math.rad(leftHairRotX)))
+				rightHeadRibbon:setRot(math.clamp(-VelocityAverageXWithLimit * 160 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.05, hairLimit[4][1], hairLimit[4][2]) - lookDir.y * 90, 0, math.clamp(-VelocityAverage[3] * 120 + 30, hairLimit[5][1], hairLimit[5][2]))
+				leftHeadRibbon:setRot(math.clamp(-VelocityAverageXWithLimit * 160 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.05, hairLimit[4][1], hairLimit[4][2]) - lookDir.y * 90, 0, math.clamp(-VelocityAverage[3] * 120 - 30, hairLimit[6][1], hairLimit[6][2]))
 				backRibbon:setRot(math.clamp(-VelocityAverageXWithLimit * 160 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.05, hairLimit[3][1], hairLimit[3][2]), 0, 0)
 			end
 		else
