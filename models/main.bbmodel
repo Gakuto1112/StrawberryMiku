@@ -11509,7 +11509,7 @@
                             "color": 0,
                             "uuid": "c46717f3-78f4-510d-07d3-f3598d07ed49",
                             "export": true,
-                            "isOpen": false,
+                            "isOpen": true,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,
@@ -11648,7 +11648,7 @@
             "color": 0,
             "uuid": "973e8625-2eb5-20f8-c591-f1138154594f",
             "export": true,
-            "isOpen": false,
+            "isOpen": true,
             "locked": false,
             "visibility": true,
             "autouv": 0,
@@ -11670,7 +11670,7 @@
                     "color": 0,
                     "uuid": "84edb8aa-a0d8-ebb6-1183-b20461bc0438",
                     "export": true,
-                    "isOpen": false,
+                    "isOpen": true,
                     "locked": false,
                     "visibility": true,
                     "autouv": 0,
@@ -11679,9 +11679,9 @@
                         {
                             "name": "RightSwellingRibbonLine",
                             "origin": [
-                                6.5,
-                                14.5,
-                                1
+                                7.5,
+                                20.5,
+                                0
                             ],
                             "color": 0,
                             "uuid": "17db67cf-b944-f0f9-9068-55561ce16575",
@@ -11728,7 +11728,7 @@
             "color": 0,
             "uuid": "223e9866-b002-f0c1-99ce-997563a23a87",
             "export": true,
-            "isOpen": false,
+            "isOpen": true,
             "locked": false,
             "visibility": true,
             "autouv": 0,
@@ -11759,14 +11759,14 @@
                         {
                             "name": "LeftSwellingRibbonLine",
                             "origin": [
-                                -6.5,
-                                14.5,
-                                -1
+                                -7.5,
+                                20.5,
+                                0
                             ],
                             "color": 0,
                             "uuid": "dcc48da1-f81f-6c1a-81be-a1107fc381f0",
                             "export": true,
-                            "isOpen": false,
+                            "isOpen": true,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,

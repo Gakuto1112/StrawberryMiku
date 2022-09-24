@@ -59,11 +59,13 @@ events.RENDER:register(function ()
 		local leftHair = models.models.main.Head.HeadTails.HeadTailLeftPivot
 		local rightHeadRibbon = models.models.main.Head.Brim.BrimOrnaments.BrimRight.BrimRightRibbon.BrimRightRibbonLine
 		local leftHeadRibbon = models.models.main.Head.Brim.BrimOrnaments.BrimLeft.BrimLeftRibbon.BrimLeftRibbonLine
+		local rightArmRibbon = models.models.main.RightArm.RightSwellingRibbon.RightSwellingRibbonLine
+		local leftArmRibbon = models.models.main.LeftArm.LeftSwellingRibbon.LeftSwellingRibbonLine
 		local dressRibbon = models.models.main.Body.Dress.Dress1.DressRibbon.DressRibbonLine
 		local backRibbon = models.models.main.Body.Dress.BackRibbonTop.BackRibbonTopLine
 		if not renderer:isFirstPerson() or client:hasIrisShader() then
 			--求めた平均から髪の角度を決定する。
-			local rotLimit = {{-170, 80}, {-60, 60}, {-60, -25}, {-170, 80}, {30, 100}, {-100, -30}, {0, 70}} --1. 髪前後, 2. 髪左右, 3. 背中のリボン, 4. ブリムのリボン前後, 5. ブリムのリボン右左右, 6. ブリムのリボン左左右, 7. ドレスのリボン
+			local rotLimit = {{-170, 80}, {-60, 60}, {-60, -25}, {-170, 80}, {30, 100}, {-100, -30}, {0, 70}, {-60, 60}, {-150, 0}, {0, 150}} --1. 髪前後, 2. 髪左右, 3. 背中のリボン, 4. ブリムのリボン前後, 5. ブリムのリボン右左右, 6. ブリムのリボン左左右, 7. ドレスのリボン, 8. 腕のリボン前後, 9. 右腕のリボン左右, 10. 左腕のリボン左右
 			if General.hasItem(player:getItem(5)) == "minecraft:elytra" then
 				rotLimit[3] = {-25, -25}
 			end
@@ -72,23 +74,30 @@ events.RENDER:register(function ()
 			if playerPose == "FALL_FLYING" then
 				rotLimit[1] = {-40, 80}
 				rotLimit[4] = {-40, 80}
+				rotLimit[8] = {0, 60}
 				rightHair:setRot(math.clamp(rotLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, rotLimit[1][1], rotLimit[1][2]), math.clamp(-VelocityAverage[1] * 20 + VelocityAverage[4] * 0.05, rotLimit[2][1], rotLimit[2][2]), 0)
 				leftHair:setRot(math.clamp(rotLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 80, rotLimit[1][1], rotLimit[1][2]), math.clamp(VelocityAverage[1] * 20 + VelocityAverage[4] * 0.05, rotLimit[2][1], rotLimit[2][2]), 0)
 				rightHeadRibbon:setRot(math.clamp(rotLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 120, rotLimit[4][1], rotLimit[4][2]), 0, 30)
 				leftHeadRibbon:setRot(math.clamp(rotLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 120, rotLimit[4][1], rotLimit[4][2]), 0, -30)
+				rightArmRibbon:setRot(0, 0, math.clamp(rotLimit[8][2] - VelocityAverage[1] * 80, rotLimit[8][1], rotLimit[8][2]))
+				leftArmRibbon:setRot(0, 0, math.clamp(rotLimit[8][2] - VelocityAverage[1] * 80, rotLimit[8][1], rotLimit[8][2]))
 				dressRibbon:setRot(0, 0, 0)
 				backRibbon:setRot(rotLimit[3][2], 0, 0)
 			elseif playerPose == "SWIMMING" then
 				rotLimit[1] = {-40, 80}
 				rotLimit[4] = {-40, 80}
+				rotLimit[8] = {-180, -120}
 				rightHair:setRot(math.clamp(rotLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, rotLimit[1][1], rotLimit[1][2]), math.clamp(-VelocityAverage[1] * 80 + VelocityAverage[4] * 0.1, rotLimit[2][1], rotLimit[2][2]), 0)
 				leftHair:setRot(math.clamp(rotLimit[1][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, rotLimit[1][1], rotLimit[1][2]), math.clamp(VelocityAverage[1] * 80 + VelocityAverage[4] * 0.1, rotLimit[2][1], rotLimit[2][2]), 0)
 				rightHeadRibbon:setRot(math.clamp(rotLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, rotLimit[4][1], rotLimit[4][2]), 0, 30)
 				leftHeadRibbon:setRot(math.clamp(rotLimit[4][2] - math.sqrt(VelocityAverage[1] ^ 2 + VelocityAverage[2] ^ 2) * 320, rotLimit[4][1], rotLimit[4][2]), 0, -30)
+				rightArmRibbon:setRot(-40, 0, math.clamp(-VelocityAverage[1] * 160 - 120, rotLimit[8][1], rotLimit[8][2]))
+				leftArmRibbon:setRot(40, 0, math.clamp(-VelocityAverage[1] * 160 - 120, rotLimit[8][1], rotLimit[8][2]))
 				dressRibbon:setRot(0, 0, 0)
 				backRibbon:setRot(rotLimit[3][2], 0, 0)
 			else
 				local VelocityAverageXWithLimit = math.clamp(VelocityAverage[1], -0.6, 0.6)
+				local VelocityAverageZWithLimit = math.clamp(VelocityAverage[3], -0.55, 0.55)
 				local rightHairYZ = math.clamp(-VelocityAverageXWithLimit * 20 - VelocityAverage[2] * 20 - VelocityAverage[3] * 90 + VelocityAverage[4] * 0.05 - angularVelocityAbs * 0.005, rotLimit[2][1], rotLimit[2][2])
 				local rightHairRotX = rightHair:getRot().x
 				local leftHairYZ = math.clamp(VelocityAverageXWithLimit * 20 + VelocityAverage[2] * 20 - VelocityAverage[3] * 90 + VelocityAverage[4] * 0.05 - angularVelocityAbs * 0.005, rotLimit[2][1], rotLimit[2][2])
@@ -97,6 +106,8 @@ events.RENDER:register(function ()
 				leftHair:setRot(math.clamp(-VelocityAverageXWithLimit * 120 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.03, rotLimit[1][1], rotLimit[1][2]) - lookDir.y * 90, leftHairYZ * -math.sin(math.rad(leftHairRotX)), leftHairYZ * math.cos(math.rad(leftHairRotX)))
 				rightHeadRibbon:setRot(math.clamp(-VelocityAverageXWithLimit * 160 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.05, rotLimit[4][1], rotLimit[4][2]) - lookDir.y * 90, 0, math.clamp(-VelocityAverage[3] * 120 + 30, rotLimit[5][1], rotLimit[5][2]))
 				leftHeadRibbon:setRot(math.clamp(-VelocityAverageXWithLimit * 160 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.05, rotLimit[4][1], rotLimit[4][2]) - lookDir.y * 90, 0, math.clamp(-VelocityAverage[3] * 120 - 30, rotLimit[6][1], rotLimit[6][2]))
+				rightArmRibbon:setRot(math.clamp(VelocityAverage[2] * 80 + VelocityAverageZWithLimit * 80 - angularVelocityAbs * 0.05, rotLimit[9][1], rotLimit[9][2]), 0, math.clamp(-VelocityAverage[1] * 160, rotLimit[8][1], rotLimit[8][2]))
+				leftArmRibbon:setRot(math.clamp(-VelocityAverage[2] * 80 + VelocityAverageZWithLimit * 80 - angularVelocityAbs * 0.05, rotLimit[10][1], rotLimit[10][2]), 0, math.clamp(-VelocityAverage[1] * 160, rotLimit[8][1], rotLimit[8][2]))
 				dressRibbon:setRot(math.clamp(-VelocityAverage[2] * 160, rotLimit[7][1], rotLimit[7][2]), 0, 0)
 				backRibbon:setRot(math.clamp(-VelocityAverageXWithLimit * 160 + VelocityAverage[2] * 80 - angularVelocityAbs * 0.05, rotLimit[3][1], rotLimit[3][2]), 0, 0)
 			end
@@ -105,6 +116,8 @@ events.RENDER:register(function ()
 			leftHair:setRot(0, 0, 0)
 			rightHeadRibbon:setRot(0, 0, 30)
 			leftHeadRibbon:setRot(0, 0, -30)
+			rightArmRibbon:setRot(0, 0, 0)
+			leftArmRibbon:setRot(0, 0, 0)
 			dressRibbon:setRot(0, 0, 0)
 			backRibbon:setRot(-25, 0, 0)
 		end
