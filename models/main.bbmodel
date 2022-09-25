@@ -10984,14 +10984,14 @@
                         {
                             "name": "HeadTailLeftPivot",
                             "origin": [
-                                -2,
+                                -3,
                                 32,
                                 2
                             ],
                             "color": 0,
                             "uuid": "b2efb26d-be8a-3230-760f-971d79d504f0",
                             "export": true,
-                            "isOpen": false,
+                            "isOpen": true,
                             "locked": false,
                             "visibility": true,
                             "autouv": 0,
@@ -11011,7 +11011,7 @@
                                     "color": 0,
                                     "uuid": "70a77b62-ac02-b3df-60ef-161dffa404b7",
                                     "export": true,
-                                    "isOpen": false,
+                                    "isOpen": true,
                                     "locked": false,
                                     "visibility": true,
                                     "autouv": 0,
