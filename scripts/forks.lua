@@ -6,7 +6,7 @@ ForkClass = {}
 ForkRoot = models.models.forks
 
 events.TICK:register(function ()
-	animations["forks"]["right_fork_vibration"]:play()
+	animations["models.forks"]["right_fork_vibration"]:play()
 	local rightArm = models.models.main.RightArm
 	local leftArm = models.models.main.LeftArm
 	local rightFork = ForkRoot.RightArm.RightFork
@@ -26,16 +26,16 @@ events.TICK:register(function ()
 			if player:isUsingItem() and ((activeHand == "MAIN_HAND" and not leftHanded) or (activeHand == "OFF_HAND" and leftHanded)) then
 				ForkRoot.RightArm:setPos(17, -5, -15)
 				ForkRoot.RightArm:setRot(-100, 20, -50)
-				animations["forks"]["right_fork_vibration"]:play()
+				animations["models.forks"]["right_fork_vibration"]:play()
 			else
 				ForkRoot.RightArm:setPos(0, 0, 5)
 				ForkRoot.RightArm:setRot(-40, -20, 10)
-				animations["forks"]["right_fork_vibration"]:stop()
+				animations["models.forks"]["right_fork_vibration"]:stop()
 			end
 		else
 			rightArm:setVisible(true)
 			ForkRoot.RightArm:setPos(0, 0, 0)
-			animations["forks"]["right_fork_vibration"]:stop()
+			animations["models.forks"]["right_fork_vibration"]:stop()
 			if player:isUsingItem() and ((activeHand == "MAIN_HAND" and not leftHanded) or (activeHand == "OFF_HAND" and leftHanded)) then
 				rightFork:setRot(0, 180, 180)
 				rightArm:setRot(0, 0, 0)
@@ -53,7 +53,7 @@ events.TICK:register(function ()
 		rightArm:setVisible(true)
 		rightArm:setRot(0, 0, 0)
 		ForkRoot.RightArm:setRot(0, 0, 0)
-		animations["forks"]["right_fork_vibration"]:stop()
+		animations["models.forks"]["right_fork_vibration"]:stop()
 	end
 	if General.hasItem(leftHandItem) == "minecraft:trident" then
 		vanilla_model.LEFT_ITEM:setVisible(false)
@@ -65,16 +65,16 @@ events.TICK:register(function ()
 			if player:isUsingItem() and ((activeHand == "OFF_HAND" and not leftHanded) or (activeHand == "MAIN_HAND" and leftHanded)) then
 				ForkRoot.LeftArm:setPos(-17, -5, -15)
 				ForkRoot.LeftArm:setRot(-100, -20, 50)
-				animations["forks"]["left_fork_vibration"]:play()
+				animations["models.forks"]["left_fork_vibration"]:play()
 			else
 				ForkRoot.LeftArm:setPos(0, 0, 5)
 				ForkRoot.LeftArm:setRot(-40, 20, -10)
-				animations["forks"]["left_fork_vibration"]:stop()
+				animations["models.forks"]["left_fork_vibration"]:stop()
 			end
 		else
 			leftArm:setVisible(true)
 			ForkRoot.LeftArm:setPos(0, 0, 0)
-			animations["forks"]["left_fork_vibration"]:stop()
+			animations["models.forks"]["left_fork_vibration"]:stop()
 			if player:isUsingItem() and ((activeHand == "OFF_HAND" and not leftHanded) or (activeHand == "MAIN_HAND" and leftHanded)) and not isFirstPerson then
 				leftFork:setRot(0, 180, 180)
 				leftArm:setRot(0, 0, 0)
@@ -92,7 +92,7 @@ events.TICK:register(function ()
 		leftArm:setVisible(true)
 		leftArm:setRot(0, 0, 0)
 		ForkRoot.LeftArm:setRot(0, 0, 0)
-		animations["forks"]["left_fork_vibration"]:stop()
+		animations["models.forks"]["left_fork_vibration"]:stop()
 	end
 end)
 
