@@ -10835,6 +10835,55 @@
                 "09ef6b02-340c-1dde-87ae-588fd10e1d39",
                 "10c82302-519f-317e-f81f-940a491887a3",
                 {
+                    "name": "SpyglassPivots",
+                    "origin": [
+                        2,
+                        26,
+                        -4
+                    ],
+                    "color": 0,
+                    "uuid": "347641af-f65f-3d08-40bc-82b4b645ad30",
+                    "export": true,
+                    "isOpen": true,
+                    "locked": false,
+                    "visibility": true,
+                    "autouv": 0,
+                    "children": [
+                        {
+                            "name": "RightSpyglassPivot",
+                            "origin": [
+                                2,
+                                26,
+                                -4
+                            ],
+                            "color": 0,
+                            "uuid": "4138a2f2-f4ca-5ee7-77e3-e0e422f18608",
+                            "export": true,
+                            "isOpen": true,
+                            "locked": false,
+                            "visibility": true,
+                            "autouv": 0,
+                            "children": []
+                        },
+                        {
+                            "name": "LeftSpyglassPivot",
+                            "origin": [
+                                -2,
+                                26,
+                                -4
+                            ],
+                            "color": 0,
+                            "uuid": "969397fc-42d5-f419-d780-70811892e5f9",
+                            "export": true,
+                            "isOpen": false,
+                            "locked": false,
+                            "visibility": true,
+                            "autouv": 0,
+                            "children": []
+                        }
+                    ]
+                },
+                {
                     "name": "HeadTails",
                     "origin": [
                         0,
@@ -10844,7 +10893,7 @@
                     "color": 0,
                     "uuid": "4a95c236-e051-6f37-765d-8f16014f8181",
                     "export": true,
-                    "isOpen": true,
+                    "isOpen": false,
                     "locked": false,
                     "visibility": true,
                     "autouv": 0,
