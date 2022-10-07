@@ -4,6 +4,7 @@ events.ENTITY_INIT:register(function ()
 	DressClass = require("scripts/dress")
 	HairPhysicsClass = require("scripts/hair_physics")
 	ForkClass = require("scripts/forks")
+	NameplateClass = require("scripts/nameplate")
 
 	--初期化処理
 	for _, vanillaModel in ipairs({vanilla_model.PLAYER, vanilla_model.ARMOR}) do
