@@ -14,6 +14,20 @@ MinecraftのスキンMod「Figura」向けスキン「StrawberryMiku（苺ミク
 
   ![髪がたなびく](README_images/髪がたなびく.gif)
 
+## 使用方法
+1. マインクラフト1.19.2に[Fabric](https://fabricmc.net/)をインストールし、[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)と[Figura 0.1.0-rc.9+1.19.2]((https://www.curseforge.com/minecraft/mc-mods/figura/files/4007916))を追加します。各Modの依存関係にご注意ください。
+2. ページ上部の緑色のボタン「**Code**」から「**Download ZIP**」からこのレポジトリのファイルをダウンロードします。（または、このレポジトリをクローンします。）
+3. 圧縮ファイルの場合は展開します。
+   - 以下のファイル、フォルダはアバターの動作には不要なので削除しても構いません。
+     - [README_images](README_images/)
+     - [.gitignore](.gitignore)
+     - [README.md](README.md)
+4. ``<マインクラフトのゲームフォルダ>/figura/avatars/``にアバターのデータを配置します。
+   - フォルダはFiguraを追加したマインクラフトを一度起動すると自動的に生成されます。ない場合は手動で作成しても構いません。
+5. ゲームメニューからFiguraメニュー（Δマーク）を開き、画面左のアバターリストから「Strawberry Miku」を選択します。
+6. 必要に応じて権限設定をして下さい。
+7. アバターをサーバーにアップロードすると、他のFiguraプレイヤーもあなたのアバターを見ることができます。
+
 ## おことわり
 私（[Gakuto1112](https://github.com/Gakuto1112)）は、初音ミクやボーカロイドに関しての知識はあまりありません。今回も、ただ、Googleにおすすめのネット記事と表示されたのを見て、いいなと思って作っただけです。その辺りはご了承下さい。
 
