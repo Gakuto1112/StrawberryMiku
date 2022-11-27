@@ -5,5 +5,79 @@
 	"color": "e40a3c",
 	"autoScripts": [
 		"scripts/main.lua"
-	]
+	],
+	"customizations": {
+		"models.main.Head.HeadTails": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailRightPivot": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10.HeadTailRightRibbon": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10.HeadTailRightRibbon.HeadTailRightRibbonLine": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRightFlowers": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailLeftPivot": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon.HeadTailLeftRibbonLine": {
+			"parentType": "None"
+		},
+		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeftFlowers": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailRight": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10.HeadTailRightRibbon": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10.HeadTailRightRibbon.HeadTailRightRibbonLine": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRightFlowers": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailLeft": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon.HeadTailLeftRibbonLine": {
+			"parentType": "None"
+		},
+		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeftFlowers": {
+			"parentType": "None"
+		}
+	}
 }
