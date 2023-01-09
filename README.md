@@ -1,7 +1,7 @@
 # StrawberryMiku
 MinecraftのスキンMod「Figura」向けスキン「StrawberryMiku（苺ミク）」です。
 
-対応Figuraバージョン：[**0.1.0-rc9**](https://www.curseforge.com/minecraft/mc-mods/figura/files/4007916)以上
+対応Figuraバージョン：[**0.1.0-rc13**](https://www.curseforge.com/minecraft/mc-mods/figura/files/4300619)
 
 ![メイン画像](README_images/メイン.jpg)
 
@@ -15,7 +15,7 @@ MinecraftのスキンMod「Figura」向けスキン「StrawberryMiku（苺ミク
   ![髪がたなびく](README_images/髪がたなびく.gif)
 
 ## 使用方法
-1. マインクラフト1.19.2に[Fabric](https://fabricmc.net/)をインストールし、[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)と[Figura 0.1.0-rc.9+1.19.2]((https://www.curseforge.com/minecraft/mc-mods/figura/files/4007916))を追加します。各Modの依存関係にご注意ください。
+1. マインクラフトに[Fabric](https://fabricmc.net/)をインストールし、[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)と[Figura 0.1.0-rc.13](https://www.curseforge.com/minecraft/mc-mods/figura/files/4300619)を追加します。各Modの依存関係にご注意ください。
 2. ページ上部の緑色のボタン「**Code**」から「**Download ZIP**」からこのレポジトリのファイルをダウンロードします。（または、このレポジトリをクローンします。）
 3. 圧縮ファイルの場合は展開します。
    - 以下のファイル、フォルダはアバターの動作には不要なので削除しても構いません。
