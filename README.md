@@ -1,7 +1,7 @@
 # StrawberryMiku
 MinecraftのスキンMod「Figura」向けスキン「StrawberryMiku（苺ミク）」です。
 
-対応Figuraバージョン：[**0.1.0-rc13**](https://www.curseforge.com/minecraft/mc-mods/figura/files/4300619)〜（最新バージョンは[**0.1.0-rc14**](https://www.curseforge.com/minecraft/mc-mods/figura/files/4438657)）
+対応Figuraバージョン：[**0.1.0-rc14**](https://www.curseforge.com/minecraft/mc-mods/figura/files/4438657)
 
 ![メイン画像](README_images/メイン.jpg)
 
