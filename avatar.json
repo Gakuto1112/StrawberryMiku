@@ -2,82 +2,82 @@
 	"name": "Strawberry Miku",
 	"description": "A costume for Hatsune Miku 15th Anniversary Project",
 	"author": "Gakuto1112",
-	"version": "0.1.0-rc.14",
+	"version": "0.1.1",
 	"color": "e40a3c",
 	"autoScripts": [
 		"scripts/main.lua"
 	],
 	"customizations": {
-		"models.main.Head.HeadTails": {
+		"models.models.main.Head.HeadTails": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailRightPivot": {
+		"models.models.main.Head.HeadTails.HeadTailRightPivot": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight": {
+		"models.models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10": {
+		"models.models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10.HeadTailRightRibbon": {
+		"models.models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10.HeadTailRightRibbon": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10.HeadTailRightRibbon.HeadTailRightRibbonLine": {
+		"models.models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRight10.HeadTailRightRibbon.HeadTailRightRibbonLine": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRightFlowers": {
+		"models.models.main.Head.HeadTails.HeadTailRightPivot.HeadTailRight.HeadTailRightFlowers": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailLeftPivot": {
+		"models.models.main.Head.HeadTails.HeadTailLeftPivot": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft": {
+		"models.models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10": {
+		"models.models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon": {
+		"models.models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon.HeadTailLeftRibbonLine": {
+		"models.models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon.HeadTailLeftRibbonLine": {
 			"parentType": "None"
 		},
-		"models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeftFlowers": {
+		"models.models.main.Head.HeadTails.HeadTailLeftPivot.HeadTailLeft.HeadTailLeftFlowers": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails": {
+		"models.models.skull.Skull.HeadTails": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailRight": {
+		"models.models.skull.Skull.HeadTails.HeadTailRight": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10": {
+		"models.models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10.HeadTailRightRibbon": {
+		"models.models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10.HeadTailRightRibbon": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10.HeadTailRightRibbon.HeadTailRightRibbonLine": {
+		"models.models.skull.Skull.HeadTails.HeadTailRight.HeadTailRight10.HeadTailRightRibbon.HeadTailRightRibbonLine": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailRight.HeadTailRightFlowers": {
+		"models.models.skull.Skull.HeadTails.HeadTailRight.HeadTailRightFlowers": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailLeft": {
+		"models.models.skull.Skull.HeadTails.HeadTailLeft": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10": {
+		"models.models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon": {
+		"models.models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon.HeadTailLeftRibbonLine": {
+		"models.models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeft10.HeadTailLeftRibbon.HeadTailLeftRibbonLine": {
 			"parentType": "None"
 		},
-		"models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeftFlowers": {
+		"models.models.skull.Skull.HeadTails.HeadTailLeft.HeadTailLeftFlowers": {
 			"parentType": "None"
 		}
 	}
