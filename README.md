@@ -1,7 +1,24 @@
-# StrawberryMiku
-MinecraftのスキンMod「Figura」向けスキン「StrawberryMiku（苺ミク）」です。
+# !!! 重要なお知らせ VERY IMPORTANT NOTES !!!
+本日未明（2023/7/16 JST）、突如として、**Figuraが削除されました**。
 
-対応Figuraバージョン：[**0.1.1**](https://modrinth.com/mod/figura/version/0.1.1+1.20.1)
+特に予告も何もなかったため、詳細は不明ですが、Figura代表者（Francielly）が数々の不適切行為を行っており、それが原因で開発チーム間で不和が発生したのでしょう。
+
+現在、Figuraはダウンロードできません。ただし、開発チームの1人がFiguraのコピーをアップロードしているので、そちらのダウンロードは可能です。
+
+尚、このREADMEに含まれるFiguraへのリンク先は一時的このコピーに変更します。
+
+何かありましたら追って更新します。
+
+[内部告発文書](https://docs.google.com/document/u/0/d/1pfy17co5ngaHMVksFrAB6FTeJgeh1EKsGmDLzo1qgIE/mobilebasic?pli=1)
+
+[Figuraのコピー](https://modrinth.com/mod/figura)
+
+***
+
+# StrawberryMiku
+MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けスキン「StrawberryMiku（苺ミク）」です。
+
+対応Figuraバージョン：[**0.1.1**](https://modrinth.com/mod/figura/version/0.1.1+1.20.1-0f8b7a9)
 
 ![メイン画像](README_images/メイン.jpg)
 
