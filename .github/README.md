@@ -12,16 +12,16 @@ MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けス
 
 対応Figuraバージョン：[**0.1.1**](https://modrinth.com/mod/figura/version/0.1.1+1.20.1-0f8b7a9)
 
-![メイン画像](README_images/メイン.jpg)
+![メイン画像](./README_images/メイン.jpg)
 
 ## 特徴
 - トライデントが専用のモデルに置き換えられます。
 
-  ![トライデントの専用モデル](README_images/トライデント.jpg)
+  ![トライデントの専用モデル](./README_images/トライデント.jpg)
 
 - プレイヤーの移動に合わせて髪がたなびきます。
 
-  ![髪がたなびく](README_images/髪がたなびく.gif)
+  ![髪がたなびく](./README_images/髪がたなびく.gif)
 
 ## 使用方法
 1. マインクラフトに[Fabric](https://fabricmc.net/)をインストールし、[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)と[Figura 0.1.1](https://modrinth.com/mod/figura/version/0.1.1+1.20.1)を追加します。各Modの依存関係にご注意ください。
