@@ -12,7 +12,7 @@ Target Figura versions: [0.1.1](https://modrinth.com/mod/figura/version/0.1.1+1.
 
   ![The trident model](./README_images/trident.jpg)
 
-- The hair flutter with the player's movement.
+- The hair flutters with the player's movement.
 
   ![Fluttering hair](./README_images/hair.gif)
 
