@@ -35,3 +35,7 @@ Figura is available in [Forge](https://files.minecraftforge.net/net/minecraftfor
 - I'm not responsible for any damages caused by using this avatar.
 - This avatar is designed for work with no resource pack and no other mods are installed. An unexpected issue may occurs when you use it with any resource packs and mods (texture and armor inconsistencies, etc.). However, I won't support in these cases.
 - Please [report an issue](https://github.com/Gakuto1112/StrawberryMiku/issues) if you find it.
+
+## References
+- [苺ミク【MMDモデル配布】 _ 不沈空母 さんのイラスト - ニコニコ静画 (イラスト)](https://seiga.nicovideo.jp/seiga/im11019402)
+- [苺やフリルに彩られた豪華な衣装に注目！15周年記念にちなんだ”苺”モチーフのキュートな初音ミクがスケールフィギュア化！ _ 電撃ホビーウェブ](https://hobby.dengeki.com/news/1658674/)
