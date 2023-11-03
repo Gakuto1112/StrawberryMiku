@@ -1,3 +1,5 @@
+言語: 　[English](./README.md)　|　**日本語**
+
 # StrawberryMiku
 MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けスキン「StrawberryMiku（苺ミク）」です。
 
