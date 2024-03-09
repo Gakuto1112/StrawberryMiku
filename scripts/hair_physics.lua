@@ -58,7 +58,7 @@ events.RENDER:register(function ()
 	local leftArmRibbon = models.models.main.LeftArm.LeftSwellingRibbon.LeftSwellingRibbonLine
 	local dressRibbon = models.models.main.Body.Dress.Dress1.DressRibbon.DressRibbonLine
 	local backRibbon = models.models.main.Body.Dress.BackRibbonTop.BackRibbonTopLine
-	if not renderer:isFirstPerson() or client:hasIrisShader() then
+	if not renderer:isFirstPerson() or client:hasShaderPack() then
 		--求めた平均から髪の角度を決定する。
 		local rotLimit = {{-170, 80}, {-60, 60}, {-60, -25}, {-170, 80}, {30, 100}, {-100, -30}, {0, 70}, {-60, 60}, {-150, 0}, {0, 150}} --1. 髪前後, 2. 髪左右, 3. 背中のリボン, 4. ブリムのリボン前後, 5. ブリムのリボン右左右, 6. ブリムのリボン左左右, 7. ドレスのリボン, 8. 腕のリボン前後, 9. 右腕のリボン左右, 10. 左腕のリボン左右
 		if General.hasItem(player:getItem(5)) == "minecraft:elytra" then
