@@ -17,7 +17,7 @@ Target Figura version: [0.1.4](https://modrinth.com/mod/figura/version/0.1.4+1.2
   ![Fluttering hair](./README_images/hair.gif)
 
 ## How to use
-Figura is available in [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/), [Fabric](https://fabricmc.net/), and [Quilt](https://quiltmc.org/).
+Figura is available in [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/), [Fabric](https://fabricmc.net/) and [NeoForge](https://neoforged.net/).
 
 1. Install the mod loader which you want to use and make the mods available.
 2. Install [Figura](https://modrinth.com/mod/figura). Note the mod dependencies.
