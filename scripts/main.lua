@@ -1,9 +1,8 @@
 events.ENTITY_INIT:register(function ()
 	--クラスのインスタンス化
-	General = require("scripts.general")
 	DressClass = require("scripts.dress")
 	HairPhysics = require("scripts.hair_physics")
-	ForkClass = require("scripts.forks")
+	Fork = require("scripts.fork")
 
 	--初期化処理
 	for _, vanillaModel in ipairs({vanilla_model.PLAYER, vanilla_model.ARMOR}) do
@@ -13,4 +12,5 @@ events.ENTITY_INIT:register(function ()
 end)
 
 --ENTITY_INITを待たず読み込むクラス
+General = require("scripts.general")
 Skull = require("scripts.skull")
