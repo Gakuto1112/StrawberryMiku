@@ -11,3 +11,6 @@ events.ENTITY_INIT:register(function ()
 	end
 	renderer:setShadowRadius(0.9)
 end)
+
+--ENTITY_INITを待たず読み込むクラス
+Skull = require("scripts.skull")
