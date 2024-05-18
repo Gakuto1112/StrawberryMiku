@@ -11,8 +11,9 @@ Fork = {
         models.models.fork.Trident:setRot(0, 0, -90)
         models.models.fork.Fork:remove()
 
-        events.ITEM_RENDER:register(function (item, mode, pos, rot, scale, lefthanded)
+        events.ITEM_RENDER:register(function (item, mode)
             if item.id == "minecraft:trident" and mode ~= "HEAD" then
+                models.models.fork.Item.Fork:setSecondaryRenderType(item:hasGlint() and "GLINT" or "NONE")
                 local isUsingTrident = player:isUsingItem()
                 if mode == "FIRST_PERSON_RIGHT_HAND" then
                     models.models.fork.Item.Fork:setScale(0.5, 0.5, 0.5)
