@@ -18,6 +18,9 @@ MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けス
 
 <!-- $inject(how_to_use) -->
 
+#### 追記事項
+ここに書かれてあるアバターのダウンロード方法の他に、レポジトリのトップページの右側にある「Releases」からでもアバターファイルをダウンロードできるようにしました。各リリースノートの「Assets」の項目に各アバターのzipファイルが添付されています。
+
 <!-- $inject(notes) -->
 
 ## 参考
