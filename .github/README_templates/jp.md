@@ -1,9 +1,11 @@
 <!-- $inject(locale_link) -->
 
 # StrawberryMiku
+<!-- DESCRIPTION_START -->
 MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けスキン「StrawberryMiku（苺ミク）」です。
 
 ターゲットFiguraバージョン：[0.1.4](https://modrinth.com/mod/figura/version/0.1.4+1.20.4)
+<!-- DESCRIPTION_END -->
 
 ![メイン画像](../README_images/main.jpg)
 
