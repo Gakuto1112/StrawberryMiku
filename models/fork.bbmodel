@@ -1,10 +1,10 @@
 {
 	"meta": {
-		"format_version": "4.9",
+		"format_version": "4.10",
 		"model_format": "free",
 		"box_uv": false
 	},
-	"name": "forks",
+	"name": "fork",
 	"model_identifier": "",
 	"visible_box": [1, 1, 0],
 	"variable_placeholders": "",
@@ -21,6 +21,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [0, 0, -10],
@@ -64,6 +65,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-2, 0, -11],
@@ -106,6 +108,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-3, 0, -14],
@@ -148,6 +151,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [3, 0, -21],
@@ -192,6 +196,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [1, 0, -21],
@@ -236,6 +241,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-1, 0, -21],
@@ -280,6 +286,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-3, 0, -21],
@@ -324,6 +331,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-1, 0, 10],
@@ -366,6 +374,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-2, 0, 12],
@@ -408,6 +417,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-3, 0, 14],
@@ -450,6 +460,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-4, 0, 16],
@@ -492,6 +503,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-3, 0, 18],
@@ -534,6 +546,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-1, 0, 20],
@@ -576,6 +589,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-0.75, 0.25, 21],
@@ -618,6 +632,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-0.875, 0.125, 21.5],
@@ -660,6 +675,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [0.25, 0.25, 21],
@@ -702,6 +718,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [0.125, 0.125, 21.5],
@@ -744,6 +761,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [1.25, 0.25, 21],
@@ -786,6 +804,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [1.125, 0.125, 21.5],
@@ -828,6 +847,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-0.25, -0.25, 7],
@@ -869,6 +889,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-3.5, 0.5, 6.5],
@@ -909,6 +930,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-0.5, 0.6, 7.5],
@@ -948,6 +970,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [-0.5, 0.6, 7.5],
@@ -987,6 +1010,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [0, 0.5, -4.5],
@@ -1026,6 +1050,7 @@
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
+			"light_emission": 0,
 			"render_order": "default",
 			"allow_mirror_modeling": true,
 			"from": [0, 0.5, -4.5],
@@ -1073,6 +1098,7 @@
 			"locked": false,
 			"visibility": true,
 			"autouv": 0,
+			"selected": false,
 			"children": [
 				"7a2b76bb-92a8-8f6f-8ca1-61830fe03f95",
 				{
@@ -1086,6 +1112,7 @@
 					"locked": false,
 					"visibility": true,
 					"autouv": 0,
+					"selected": false,
 					"children": [
 						"72fe7f93-5718-5b3b-a934-5b507cea3d5b",
 						"4b2d51db-583e-0215-e625-89b05ee17401",
@@ -1106,6 +1133,7 @@
 					"locked": false,
 					"visibility": true,
 					"autouv": 0,
+					"selected": false,
 					"children": [
 						"2f552386-b768-2e8b-11b1-f3d38851a163",
 						"621839d7-f30c-f9d7-b0d3-ad7a305206ab",
@@ -1123,6 +1151,7 @@
 							"locked": false,
 							"visibility": true,
 							"autouv": 0,
+							"selected": false,
 							"children": [
 								"50bc0924-94ff-56fd-e9b7-49e051ef1e5d",
 								{
@@ -1136,6 +1165,7 @@
 									"locked": false,
 									"visibility": true,
 									"autouv": 0,
+									"selected": false,
 									"children": [
 										{
 											"name": "LeftClownTip1",
@@ -1148,6 +1178,7 @@
 											"locked": false,
 											"visibility": true,
 											"autouv": 0,
+											"selected": false,
 											"children": ["7a84a2f6-4ca4-0b5c-fa16-fcb2647c7b28", "3da4b82b-6934-b17f-80ff-fa359682ac9d"]
 										},
 										{
@@ -1161,6 +1192,7 @@
 											"locked": false,
 											"visibility": true,
 											"autouv": 0,
+											"selected": false,
 											"children": ["ea7516ae-59cb-a3c1-08c5-c12f61d66c63", "cc734cf5-9ad3-5fec-ee3b-c9c86c73236b"]
 										},
 										{
@@ -1174,6 +1206,7 @@
 											"locked": false,
 											"visibility": true,
 											"autouv": 0,
+											"selected": false,
 											"children": ["531baa24-d229-ed86-1265-65a826f1d184", "dfd0460f-28ea-3e6b-a3e7-13c2dcf6b599"]
 										}
 									]
@@ -1193,6 +1226,7 @@
 					"locked": false,
 					"visibility": true,
 					"autouv": 0,
+					"selected": false,
 					"children": [
 						"4b551ab6-5a84-d2c7-558f-ae32e53ad0e4",
 						"42957bce-f4f7-34b3-d096-3335f4e92ab6",
@@ -1207,6 +1241,7 @@
 							"locked": false,
 							"visibility": true,
 							"autouv": 0,
+							"selected": false,
 							"children": ["5c8c397a-e4a0-497e-05c4-be5b3148dc54", "7c659720-8f45-1043-efd9-391b4b1e9385"]
 						},
 						{
@@ -1220,6 +1255,7 @@
 							"locked": false,
 							"visibility": true,
 							"autouv": 0,
+							"selected": false,
 							"children": ["8cd2d40e-77a7-81e0-5a48-4ed33591849e", "1ac6ca2e-6dc6-1f83-443b-fdf1f838449f"]
 						}
 					]
@@ -1229,20 +1265,23 @@
 	],
 	"textures": [
 		{
-			"path": "C:\\Users\\gakut\\AppData\\Roaming\\com.modrinth.theseus\\profiles\\Fabricバニラ\\figura\\avatars\\苺ミク\\textures\\fork.png",
+			"path": "C:\\Users\\gakut\\AppData\\Roaming\\ModrinthApp\\profiles\\Fabricバニラ\\figura\\avatars\\苺ミク\\textures\\fork.png",
 			"name": "fork.png",
 			"folder": "",
 			"namespace": "",
 			"id": "0",
+			"group": "",
 			"width": 32,
 			"height": 21,
 			"uv_width": 32,
 			"uv_height": 21,
 			"particle": false,
+			"use_as_default": false,
 			"layers_enabled": false,
 			"sync_to_project": "",
 			"render_mode": "default",
 			"render_sides": "auto",
+			"pbr_channel": "color",
 			"frame_time": 1,
 			"frame_order_type": "loop",
 			"frame_order": "",
@@ -1251,7 +1290,7 @@
 			"internal": true,
 			"saved": true,
 			"uuid": "308dd979-61bb-afe7-d48b-c1d1f59fdc4f",
-			"relative_path": "../../textures/fork.png",
+			"relative_path": "../textures/fork.png",
 			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAVCAYAAAAnzezqAAAAAXNSR0IArs4c6QAAAVdJREFUSEu9VjtywkAMlSofIWkSqsxwAtLgImVKD5RcIDfgCBwkJalSUFKYhhtkJl1o4BRi5Hh31mKF7MXGzXp/2uf3nrRGAAA6rYhbfFhi2Of3a49bb61z8eU63o/apBXUzVsgrPgXAMKA1mYNpAQlGQ73DQ5AfoQENzgAS8qbPWAeUBtblStGUUwzygra0S9M8QXg79XHi5mQiKqs8kZFRB7bjt+robefDSBilXEmAz41awC8aXpYqADk4SGQJAAWxTIdewcQMsCHeRm4E0hh1YV+JWAf3AtAWwliZTYc64UBJ0FlRMeCwkTMG0kmlB5g3XdPn/+Z8LxXpUgGoNXxVCksc14txQ0Ns6JRXDgbukihAekOgFOPqZet4YVkAKlXsiWZk7o1A/D90ZCgIc9kpJ5n/bC0BsCXEa4foZyVkH/lQPMjcJ/bWEW0zOfnrR+GviTQmDgDbC8NlMPJMccAAAAASUVORK5CYII="
 		}
 	]
