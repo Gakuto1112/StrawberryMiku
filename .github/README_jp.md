@@ -18,7 +18,7 @@ MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けス
 
   ![髪がたなびく](./README_images/hair.gif)
 
-### アバターのバージョン表示
+## アバターのバージョン表示
 v1.1.0より、アクションホイールを開けている際に、画面左上に現在使用中のアバターのバージョンとアップデートの有無が表示されます。
 
 ![アバターバージョン表示](./README_images/version_information.jpg)
