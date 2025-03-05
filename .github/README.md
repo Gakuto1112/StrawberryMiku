@@ -4,7 +4,7 @@ Language: 　**English**　|　[日本語](./README_jp.md)
 <!-- DESCRIPTION_START -->
 This is "Strawberry Miku (苺ミク)", the avatar for [Figura](https://modrinth.com/mod/figura), the skin mod for [Minecraft](https://www.minecraft.net/en-us).
 
-Target Figura version: [0.1.4](https://modrinth.com/mod/figura/version/0.1.4+1.20.4)
+Target Figura version: [0.1.5](https://modrinth.com/mod/figura/version/0.1.5b+1.21.4)
 <!-- DESCRIPTION_END -->
 
 ![Main image](./README_images/main.jpg)
