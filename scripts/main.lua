@@ -3,6 +3,7 @@ events.ENTITY_INIT:register(function ()
 	DressClass = require("scripts.dress")
 	HairPhysics = require("scripts.hair_physics")
 	Fork = require("scripts.fork")
+	UpdateChecker = require("scripts.update_checker")
 
 	--初期化処理
 	for _, vanillaModel in ipairs({vanilla_model.PLAYER, vanilla_model.ARMOR}) do
