@@ -18,10 +18,6 @@ MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けス
 
   ![髪がたなびく](../README_images/hair.gif)
 
-<!-- $inject(how_to_use) -->
-
-<!-- $inject(notes) -->
-
 ### アバターのバージョン表示
 v1.1.0より、アクションホイールを開けている際に、画面左上に現在使用中のアバターのバージョンとアップデートの有無が表示されます。
 
@@ -39,6 +35,10 @@ v1.1.0より、アクションホイールを開けている際に、画面左�
 
 > [!WARNING]
 > アップデートの確認を短時間で繰り返し行うと、一時的にGitHub側から制限が課せられ、しばらくの間アップデートの確認を行えなくなります。
+
+<!-- $inject(how_to_use) -->
+
+<!-- $inject(notes) -->
 
 ## 参考
 - [苺ミク【MMDモデル配布】 _ 不沈空母 さんのイラスト - ニコニコ静画 (イラスト)](https://seiga.nicovideo.jp/seiga/im11019402)
