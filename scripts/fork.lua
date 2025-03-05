@@ -13,7 +13,7 @@ Fork = {
 
         events.ITEM_RENDER:register(function (item, mode)
             if item.id == "minecraft:trident" and mode ~= "HEAD" then
-                models.models.fork.Item.Fork:setSecondaryRenderType(item:hasGlint() and "GLINT" or "NONE")
+                models.models.fork.Item.Fork:setSecondaryRenderType(item:hasGlint() and (client:getVersion() == "1.21.4" and "GLINT2" or "GLINT") or "NONE")
                 local isUsingTrident = player:isUsingItem()
                 if mode == "FIRST_PERSON_RIGHT_HAND" then
                     models.models.fork.Item.Fork:setScale(0.5, 0.5, 0.5)
