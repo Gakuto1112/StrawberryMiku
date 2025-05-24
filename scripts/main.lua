@@ -1,5 +1,6 @@
 events.ENTITY_INIT:register(function ()
 	--クラスのインスタンス化
+	StringUtils = require("scripts.string_utils")
 	DressClass = require("scripts.dress")
 	HairPhysics = require("scripts.hair_physics")
 	Fork = require("scripts.fork")
